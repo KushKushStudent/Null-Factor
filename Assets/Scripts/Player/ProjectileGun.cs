@@ -108,9 +108,9 @@ public class ProjectileGun : MonoBehaviour
 
         GameObject currentBullet=Instantiate(bullet,attackPoint.position,Quaternion.identity);
 
-        currentBullet.transform.forward = directionWithSpread.normalized;
+        currentBullet.transform.forward = directionWithSpread.normalized + player.GetComponent<Rigidbody>().velocity;
 
-        currentBullet.GetComponent<Rigidbody>().AddForce( (directionWithSpread.normalized * bulletShootForce),ForceMode.Impulse);
+        currentBullet.GetComponent<Rigidbody>().AddForce( directionWithSpread.normalized * bulletShootForce,ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(playerCamera.transform.up *upwardBulletForce,ForceMode.Impulse); //only set bullet upward force  >0 for grenades or arcing projectiles
 
         if (muzzleFlash != null) //creates muzzleflash
