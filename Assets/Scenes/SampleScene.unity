@@ -1672,13 +1672,13 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 64
-  wallRunForce: 3000
-  maxWallRunTime: 2
-  maxWallSpeed: 5
+  wallRunForce: 5000
+  maxWallRunTime: 5
+  maxWallSpeed: 10
   isWallRight: 0
   isWallLeft: 0
   isWallRunning: 0
-  maxWallRunCameraTilt: 45
+  maxWallRunCameraTilt: 60
   wallRunCameraTilt: 0
   orientation: {fileID: 92556001}
   rb: {fileID: 1146699267}
@@ -3557,7 +3557,7 @@ PrefabInstance:
       objectReference: {fileID: 1146699271}
     - target: {fileID: 6083975824211428533, guid: fed28bf443789e64885dc4764b77a690, type: 3}
       propertyPath: maxSpeed
-      value: 39
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6083975824211428533, guid: fed28bf443789e64885dc4764b77a690, type: 3}
       propertyPath: jumpForce
@@ -3565,11 +3565,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6083975824211428533, guid: fed28bf443789e64885dc4764b77a690, type: 3}
       propertyPath: slideForce
-      value: 250
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 6083975824211428533, guid: fed28bf443789e64885dc4764b77a690, type: 3}
       propertyPath: maxSlopeAngle
-      value: 60
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6083975824211428534, guid: fed28bf443789e64885dc4764b77a690, type: 3}
       propertyPath: m_LocalScale.x
