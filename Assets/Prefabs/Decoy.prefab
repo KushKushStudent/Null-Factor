@@ -671,7 +671,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   attacking: 0
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 2
   projectile: {fileID: 2416130882664782325, guid: 2cfbceb44a0dde14fb96b3359a62d3e1, type: 3}
   bulletSpawnPoint: {fileID: 2537293412362773054}
   bulletForce: 500
