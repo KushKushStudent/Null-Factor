@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   despawnTime: 5
-  bounces: 2
+  bounces: 0
   currentBounces: 0
 --- !u!96 &7036733809281093285
 TrailRenderer:

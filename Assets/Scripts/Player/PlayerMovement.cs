@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour {
 
     //Crouch & Slide
     private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
+    public float crouchSlamForce = 1000f;
     private Vector3 playerScale;
     public float slideForce = 400;
     public float slideCounterMovement = 0.2f;
@@ -91,10 +92,13 @@ public class PlayerMovement : MonoBehaviour {
         transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
         if (rb.velocity.magnitude > 0.5f) {
-            if (grounded) {
+            if (grounded)
+            {
                 rb.AddForce(orientation.transform.forward * slideForce);
             }
+         
         }
+        if (!grounded) { rb.AddForce(Vector3.down * crouchSlamForce); }
     }
 
     private void StopCrouch() {
