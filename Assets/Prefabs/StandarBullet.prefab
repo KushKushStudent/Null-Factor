@@ -108,9 +108,11 @@ GameObject:
   - component: {fileID: 5401235101479450723}
   - component: {fileID: 5515341608137995362}
   - component: {fileID: 4832851236652672505}
+  - component: {fileID: -626569231908327291}
+  - component: {fileID: 5681748201386422524}
   m_Layer: 0
   m_Name: StandarBullet
-  m_TagString: Untagged
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,6 +321,34 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &-626569231908327291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660023626405316792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9aceda90cd1f104c9e9f14c6af2f766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  despawnTime: 5
+  bounces: 0
+  currentBounces: 0
+--- !u!114 &5681748201386422524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660023626405316792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e5ce9a170c3e5468e6e4603167c1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamage: 30
 --- !u!1 &7129819584265794819
 GameObject:
   m_ObjectHideFlags: 0

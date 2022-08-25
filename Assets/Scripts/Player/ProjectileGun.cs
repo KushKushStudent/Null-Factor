@@ -93,7 +93,7 @@ public class ProjectileGun : MonoBehaviour
         }
         else 
         {
-            targetPoint = ray.GetPoint(75);
+            targetPoint = ray.GetPoint(300);
 
         }
 
