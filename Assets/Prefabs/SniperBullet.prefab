@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   despawnTime: 5
-  bounces: 0
+  bounces: 2
   currentBounces: 0
 --- !u!114 &5681748201386422524
 MonoBehaviour:

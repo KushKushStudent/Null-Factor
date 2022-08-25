@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileDespawner : MonoBehaviour
 {
     public float despawnTime;
-    public int bounces=2;
+    public int bounces=0;
     public int currentBounces = 0;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,11 @@ public class ProjectileDespawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentBounces > bounces)
+        {
+            Destroy(gameObject, 0f);
+        }
+
     }
     IEnumerator despawnProjectile() 
     {
@@ -27,10 +31,6 @@ public class ProjectileDespawner : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {   currentBounces++;
-        if (currentBounces>=bounces) 
-        {
-            Destroy(gameObject, 1f);
-        }
-        
+       
     }
 }
