@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 215117166}
   - component: {fileID: 215117169}
   - component: {fileID: 215117168}
-  - component: {fileID: 215117167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &215117167
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215117165}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2537293412362773054
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3455760674267964123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2520673595697755555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6901718943277183385}
   - component: {fileID: 3373313103091236135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +253,7 @@ GameObject:
   - component: {fileID: 1194246345164195507}
   - component: {fileID: 8370945962062350249}
   - component: {fileID: 5775447464180507127}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hpbarcanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +353,7 @@ GameObject:
   - component: {fileID: 2236301160299460129}
   - component: {fileID: 5254973649629972786}
   - component: {fileID: 7127939249569936633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +429,7 @@ GameObject:
   - component: {fileID: 6036610476474434340}
   - component: {fileID: 3802034318435417466}
   - component: {fileID: 8052799147033547991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -519,12 +505,11 @@ GameObject:
   - component: {fileID: 8089991004374875716}
   - component: {fileID: 8089991004374875717}
   - component: {fileID: 8089991004374875738}
-  - component: {fileID: 8089991004374875739}
   - component: {fileID: 8089991004374875736}
   - component: {fileID: 8089991004374875719}
   - component: {fileID: 745280000526917992}
   - component: {fileID: 1769160274769338932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decoy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,19 +584,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8089991004374875739
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8089991004374875743}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &8089991004374875736
 NavMeshAgent:
   m_ObjectHideFlags: 0

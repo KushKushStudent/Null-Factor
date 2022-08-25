@@ -1,23 +1,22 @@
-// Some stupid rigidbody based movement by Dani
 
 using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    //Assingables
+    [Header("Assignables")]
     public Transform playerCam;
     public Transform orientation;
     
     //Other
-    private Rigidbody rb;
+    public Rigidbody rb;
 
-    //Rotation and look
+    [Header("Look and rotation")]
     private float xRotation;
     private float sensitivity = 50f;
     private float sensMultiplier = 1f;
-    
-    //Movement
+
+    [Header("Movement")]
     public float moveSpeed = 4500;
     public float maxSpeed = 20;
     public bool grounded;
@@ -27,29 +26,38 @@ public class PlayerMovement : MonoBehaviour {
     private float threshold = 0.01f;
     public float maxSlopeAngle = 35f;
 
-    //Crouch & Slide
+    [Header("Crouch and Slider")]
     private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
     public float crouchSlamForce = 1000f;
     private Vector3 playerScale;
     public float slideForce = 400;
     public float slideCounterMovement = 0.2f;
 
-    //Jumping
+    [Header("Jumping")]
     private bool readyToJump = true;
     private float jumpCooldown = 0.25f;
     public float jumpForce = 550f;
+
     
-    //Input
+    [Header("Input")]
     float x, y;
     bool jumping, sprinting, crouching;
 
-    //wallRun
-    public WallRun wallRun;
     
-    //Sliding
+    public WallRun wallRun;
+
+    [Header("Sliding")]
+    
     private Vector3 normalVector = Vector3.up;
     private Vector3 wallNormalVector;
 
+
+    [Header ("GroundSlam")]
+    public bool groundSlamExplosion=false;
+    public float groundSlamRadius = 10f;
+    public float groundSlamDamage = 30f;
+    public LayerMask enemies;
+    public ParticleSystem groundSlamEffect;
     void Awake() {
         rb = GetComponent<Rigidbody>();
     }
@@ -98,10 +106,15 @@ public class PlayerMovement : MonoBehaviour {
             }
          
         }
-        if (!grounded) { rb.AddForce(Vector3.down * crouchSlamForce); }
+        if (!grounded) {
+            groundSlamExplosion =true;
+            rb.AddForce(Vector3.down * crouchSlamForce);
+            Debug.Log(groundSlamExplosion); ; 
+        }
     }
 
     private void StopCrouch() {
+        groundSlamExplosion = false;
         transform.localScale = playerScale;
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }
@@ -253,11 +266,7 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    /// <summary>
-    /// Find the velocity relative to where the player is looking
-    /// Useful for vectors calculations regarding movement and limiting movement
-    /// </summary>
-    /// <returns></returns>
+    
     public Vector2 FindVelRelativeToLook() {
         float lookAngle = orientation.transform.eulerAngles.y;
         float moveAngle = Mathf.Atan2(rb.velocity.x, rb.velocity.z) * Mathf.Rad2Deg;
@@ -279,19 +288,19 @@ public class PlayerMovement : MonoBehaviour {
 
     private bool cancellingGrounded;
     
-    /// <summary>
-    /// Handle ground detection
-    /// </summary>
+   
     private void OnCollisionStay(Collision other) {
-        //Make sure we are only checking for walkable layers
+       
         int layer = other.gameObject.layer;
         if (whatIsGround != (whatIsGround | (1 << layer))) return;
 
-        //Iterate through every collision in a physics update
+      
         for (int i = 0; i < other.contactCount; i++) {
             Vector3 normal = other.contacts[i].normal;
             //FLOOR
             if (IsFloor(normal)) {
+                
+                
                 grounded = true;
                 cancellingGrounded = false;
                 normalVector = normal;
@@ -299,7 +308,7 @@ public class PlayerMovement : MonoBehaviour {
             }
         }
 
-        //Invoke ground/wall cancel, since we can't check normals with CollisionExit
+        
         float delay = 3f;
         if (!cancellingGrounded) {
             cancellingGrounded = true;
@@ -310,5 +319,45 @@ public class PlayerMovement : MonoBehaviour {
     private void StopGrounded() {
         grounded = false;
     }
-    
+
+    public void GroundSlam() 
+    {
+        Collider[] enemyArray = Physics.OverlapSphere(rb.position,groundSlamRadius,enemies );
+
+        if (enemyArray!=null)
+        {
+            for (int i = 0; i < enemyArray.Length; i++)
+            {
+              
+                enemyArray[i].gameObject.GetComponent<TargetController>().TakeDamage(groundSlamDamage);
+               
+                Debug.Log(enemyArray[i].gameObject.name);
+            }
+          ParticleSystem effect= Instantiate(groundSlamEffect, rb.transform.position-new Vector3(0,1,0), Quaternion.identity);
+            Destroy(effect,3);
+            groundSlamExplosion = false;
+        }
+
+       
+           
+        
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+   
+         Gizmos.DrawWireSphere(rb.position, groundSlamRadius);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.layer);
+        Debug.Log(groundSlamExplosion);
+
+        if (collision.gameObject.layer==3 && groundSlamExplosion==true)
+        {
+            GroundSlam();
+            
+        }   
+    }
+
 }

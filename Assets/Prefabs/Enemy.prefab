@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 215117166}
   - component: {fileID: 215117169}
   - component: {fileID: 215117168}
-  - component: {fileID: 215117167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &215117167
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215117165}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1464035906403226712
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,8 +94,7 @@ GameObject:
   - component: {fileID: 5604376642518705344}
   - component: {fileID: 7672639256669560771}
   - component: {fileID: 6902300455454305900}
-  - component: {fileID: 224535219414846896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,20 +166,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &224535219414846896
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464035906403226712}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &1753398546456412126
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,8 +177,7 @@ GameObject:
   - component: {fileID: 4974569941027701294}
   - component: {fileID: 8626883566763679555}
   - component: {fileID: 2294439974333814630}
-  - component: {fileID: 4418341163492632974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,19 +249,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4418341163492632974
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753398546456412126}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2537293412362773054
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3455760674267964123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 321198972253767852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decoy1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2520673595697755555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,8 +359,7 @@ GameObject:
   - component: {fileID: 2598759298905093913}
   - component: {fileID: 2983051441355660529}
   - component: {fileID: 371410162201538513}
-  - component: {fileID: 1870708400485654459}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,20 +431,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1870708400485654459
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4973660895146193922}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &5753878802282453424
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5509770726574533149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decoy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6901718943277183385}
   - component: {fileID: 3373313103091236135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +564,7 @@ GameObject:
   - component: {fileID: 1194246345164195507}
   - component: {fileID: 8370945962062350249}
   - component: {fileID: 5775447464180507127}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hpbarcanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,7 +664,7 @@ GameObject:
   - component: {fileID: 2236301160299460129}
   - component: {fileID: 5254973649629972786}
   - component: {fileID: 7127939249569936633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,8 +740,7 @@ GameObject:
   - component: {fileID: 7773018207931464247}
   - component: {fileID: 7949727054212895393}
   - component: {fileID: 8508963234209988685}
-  - component: {fileID: 5981510773132534144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -871,20 +812,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5981510773132534144
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7241466398045614890}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &7524584214946678740
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +823,7 @@ GameObject:
   - component: {fileID: 6036610476474434340}
   - component: {fileID: 3802034318435417466}
   - component: {fileID: 8052799147033547991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -977,7 +904,7 @@ GameObject:
   - component: {fileID: 8089991004374875719}
   - component: {fileID: 8218196117861928846}
   - component: {fileID: 7313221944978862270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +1098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5371335953528689653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decoy1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
