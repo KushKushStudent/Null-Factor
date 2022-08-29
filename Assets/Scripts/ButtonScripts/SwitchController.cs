@@ -45,15 +45,16 @@ public class SwitchController : MonoBehaviour
             Activate();
         }
     }
-    void Activate() 
+    void Activate()
     {
+        this.gameObject.GetComponent<SetNewWaypoints>().setNewWaypoints();
         switchAnimator.Play(doorAnimationOpen.name);
 
         for (int i=0;i<switches.Length;i++) 
         {
-            Destroy(switches[i].transform.parent);
+            Destroy(switches[i].transform.parent.gameObject);
         }
-        this.gameObject.GetComponent<SetNewWaypoints>().setNewWaypoints();
+       
         /* transform.Translate(Vector3.down*verticalMoveDistance);
          for (int i = 0; i < switches.Length; i++)
          {

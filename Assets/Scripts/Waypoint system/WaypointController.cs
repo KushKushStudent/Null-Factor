@@ -30,6 +30,14 @@ public class WaypointController : MonoBehaviour
            allImgs[i].enabled = false;
             allMeters[i].enabled = false;
         }
+        for (int i = 0; i < imgs.Length; i++)
+
+        {
+            imgs[i].enabled = true;
+            meters[i].enabled = true;
+        }
+
+       
 
     }
 
@@ -42,8 +50,8 @@ public class WaypointController : MonoBehaviour
    
         for (int i = 0; i < targets.Length; i++)
         {
-            imgs[i].enabled = true;
-            meters[i].enabled = true;
+            
+            
             float minX = imgs[i].GetPixelAdjustedRect().width / 2;
             float maxX = Screen.width - minX;
 
@@ -51,6 +59,7 @@ public class WaypointController : MonoBehaviour
             float maxY = Screen.height - minY;
 
             pos = Camera.main.WorldToScreenPoint(targets[i].position + offset);
+           
             if (Vector3.Dot((targets[i].position - transform.position), transform.forward) < 0)
             {
                 if (pos.x < Screen.width / 2)
@@ -68,6 +77,12 @@ public class WaypointController : MonoBehaviour
             pos.y = Mathf.Clamp(pos.y, minY, maxY);
             imgs[i].transform.position = pos;
             meters[i].text = Mathf.Round(Vector3.Distance(targets[i].position, transform.position)).ToString() + "m";
+
+            if (Mathf.Round(Vector3.Distance(targets[i].position, transform.position))<5)
+            {
+                imgs[i].enabled = false;
+                meters[i].enabled = false;
+            }
         }
 
 
@@ -81,7 +96,13 @@ public class WaypointController : MonoBehaviour
 
       targets= newTargets;
         meters = newMeters;
-    
+
+        for (int i = 0; i < imgs.Length; i++)
+
+        {
+            imgs[i].enabled = true;
+            meters[i].enabled = true;
+        }
     }
 
     public void ResetUI() 
