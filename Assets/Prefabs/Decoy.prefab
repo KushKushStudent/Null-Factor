@@ -594,7 +594,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2.7
+  m_Speed: 20
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 1.9
@@ -647,8 +647,8 @@ MonoBehaviour:
   projectile: {fileID: 2416130882664782325, guid: 2cfbceb44a0dde14fb96b3359a62d3e1, type: 3}
   bulletSpawnPoint: {fileID: 2537293412362773054}
   bulletForce: 500
-  sightRange: 160
-  attackRange: 100
+  sightRange: 120
+  attackRange: 50
   playerInSightRange: 0
   playerInAttackRange: 0
   decoyPrefab: {fileID: 0}

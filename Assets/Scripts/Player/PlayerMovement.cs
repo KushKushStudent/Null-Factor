@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour {
 
+   public GameManager gm;
     [Header("Assignables")]
     public Transform playerCam;
     public Transform orientation;
@@ -419,6 +420,15 @@ public class PlayerMovement : MonoBehaviour {
         }
         else { StopRewind(); }
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Coin")
+        {
+            Destroy(other.gameObject);
+            gm.collectCoin();
+
+        }
     }
 
 }
