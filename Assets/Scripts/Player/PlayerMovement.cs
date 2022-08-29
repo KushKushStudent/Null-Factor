@@ -1,6 +1,8 @@
 
 using System;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -58,12 +60,20 @@ public class PlayerMovement : MonoBehaviour {
     public float groundSlamDamage = 30f;
     public LayerMask enemies;
     public ParticleSystem groundSlamEffect;
+
+    [Header("TimeRewind")]
+    public bool isRewinding = false;
+    List<TimeController> pointsInTime;
+    public int timeToRewind = 5;
+
+    public int updateCounter = 0;
     void Awake() {
         rb = GetComponent<Rigidbody>();
     }
     
     void Start() {
         playerScale =  transform.localScale;
+        pointsInTime = new List<TimeController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -71,10 +81,24 @@ public class PlayerMovement : MonoBehaviour {
     
     private void FixedUpdate() {
         Movement();
+        if (isRewinding)
+        {
+            Rewind();
+        }
+        else { Record(); }
+
     }
 
     private void Update() {
         MyInput();
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartRewind();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            StopRewind();
+        }
         Look();
         wallRun.CheckForWall();
         wallRun.WallRunInput();
@@ -358,6 +382,43 @@ public class PlayerMovement : MonoBehaviour {
             GroundSlam();
             
         }   
+    }
+    void StartRewind()
+    {
+
+        isRewinding = true;
+        rb.isKinematic = true;
+    }
+    void StopRewind()
+    {
+        isRewinding = false;
+        rb.isKinematic = false;
+    }
+    void Record()
+    {
+        if (pointsInTime.Count > Mathf.Round(timeToRewind / Time.fixedDeltaTime / 3))
+        {
+            pointsInTime.RemoveAt(pointsInTime.Count - 1);
+
+        }
+        if (updateCounter >= 3)
+        {
+            pointsInTime.Insert(0, new TimeController(transform.position, transform.rotation));
+            updateCounter = 0;
+        }
+        else { updateCounter++; }
+    }
+    void Rewind()
+    {
+        if (pointsInTime.Count > 0)
+        {
+            TimeController pointInTime = pointsInTime[0];
+            transform.position = pointInTime.position;
+            transform.rotation = pointInTime.rotation;
+            pointsInTime.RemoveAt(0);
+        }
+        else { StopRewind(); }
+
     }
 
 }
