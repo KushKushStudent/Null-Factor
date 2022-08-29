@@ -47,8 +47,9 @@ public class SwitchController : MonoBehaviour
     }
     void Activate()
     {
-        this.gameObject.GetComponent<SetNewWaypoints>().setNewWaypoints();
         switchAnimator.Play(doorAnimationOpen.name);
+        this.gameObject.GetComponent<SetNewWaypoints>().setNewWaypoints();
+       
 
         for (int i=0;i<switches.Length;i++) 
         {
