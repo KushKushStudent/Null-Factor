@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 8dd51b45c041bba4eb813dcaff9b28dd
 ModelImporter:
-  serializedVersion: 21202
+  serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects:
   - first:
@@ -24,6 +24,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: P.Glow.001
     second: {fileID: 2100000, guid: 4ce4a9204037c974e920857fd4a6e714, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sniper
+    second: {fileID: 2100000, guid: cf32fcfc4d2417d4e87772de0ffa8df0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -129,6 +134,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
