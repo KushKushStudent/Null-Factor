@@ -85,7 +85,7 @@ public class PlayerHealthController : MonoBehaviour
         lerpTimer = 0f;
         health = Mathf.Clamp(health, 0, maxHealth);
         durationTimer = 0f;
-        overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1);
+        overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1f);
         UpdateHealthUI();
 
     }
