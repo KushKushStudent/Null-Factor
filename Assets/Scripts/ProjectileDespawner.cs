@@ -30,7 +30,9 @@ public class ProjectileDespawner : MonoBehaviour
         
     }
     private void OnCollisionEnter(Collision collision)
-    {   currentBounces++;
+    {   if(collision.gameObject.tag!="Enemy")
+            currentBounces++;
+    else Destroy(gameObject);
        
     }
 }

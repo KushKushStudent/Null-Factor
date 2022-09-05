@@ -7,6 +7,8 @@ TagManager:
   - EnemyProjectile
   - JumpPad
   - PlayerProjectile
+  - Coin
+  - Enemy
   layers:
   - Default
   - TransparentFX

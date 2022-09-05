@@ -200,11 +200,11 @@ public class PlayerMovement : MonoBehaviour {
 
             //If jumping while falling, reset y velocity.
             Vector3 vel = rb.velocity;
-            if (rb.velocity.y < 0.5f)
+           /* if (rb.velocity.y < 0.5f)
                 rb.velocity = new Vector3(vel.x, 0, vel.z);
             else if (rb.velocity.y > 0)
                 rb.velocity = new Vector3(vel.x, vel.y / 2, vel.z);
-
+           */
             Invoke(nameof(ResetJump), jumpCooldown);
         }
         if (wallRun.isWallRunning)
