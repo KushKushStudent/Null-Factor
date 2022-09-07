@@ -28,7 +28,7 @@ public class ProjectileGun : MonoBehaviour
     public bool allowInvoke = true;
 
     [Header("Graphics")]
-    public GameObject muzzleFlash;
+  
     public TextMeshProUGUI ammunitionDisplay;
 
     public GameObject player;
@@ -39,34 +39,51 @@ public class ProjectileGun : MonoBehaviour
     private void Awake()
     {
         bulletsLeft = magazineSize;
+        
         readyToShoot = true;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     void Start()
     {
+        bulletsLeft = magazineSize;
+
+        readyToShoot = true;
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+    private void FixedUpdate()
+    {
+        
     }
 
     // Update is called once per frame
+    private void LateUpdate()
+    {
+        
+    }
     void Update()
     {
+
         PlayerInput();
 
-        if (ammunitionDisplay != null) {
+        if (ammunitionDisplay != null)
+        {
             if (reloading) { ammunitionDisplay.SetText("Reloading..."); } else { ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + "/" + magazineSize / bulletsPerTap); }
 
-        } 
-            
+        }
     }
     private void PlayerInput() 
     {
         if (allowButtonHold)  //Checks if weapon is single fire or auto
         {
+
             shooting = Input.GetKey(KeyCode.Mouse0);
         }
         else shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
+        if (Input.GetKeyUp(KeyCode.Mouse0 )) { }
 
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();        //reloading
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload(); 
+        //reloading
 
 
         if (readyToShoot && shooting &&!reloading && bulletsLeft<=0) Reload();        //reload if firing once empty
@@ -100,21 +117,20 @@ public class ProjectileGun : MonoBehaviour
         Vector3 directionWithoutSpeed=targetPoint - attackPoint.position;
 
         //bullet spread variables
-        float x = Random.RandomRange(-spread,spread);
+        float x = Random.Range(-spread,spread);
         float y= Random.Range(-spread,spread);
 
 
         Vector3 directionWithSpread = directionWithoutSpeed + new Vector3(x, y, 0);
 
-        GameObject currentBullet=Instantiate(bullet,attackPoint.position,Quaternion.identity);
+        GameObject ?currentBullet=Instantiate(bullet,attackPoint.position,Quaternion.identity);
 
         currentBullet.transform.forward = directionWithSpread.normalized+ player.GetComponent<Rigidbody>().velocity;
 
-        currentBullet.GetComponent<Rigidbody>().AddForce( directionWithSpread.normalized * bulletShootForce,ForceMode.Impulse);
-        currentBullet.GetComponent<Rigidbody>().AddForce(playerCamera.transform.up *upwardBulletForce,ForceMode.Impulse); //only set bullet upward force  >0 for grenades or arcing projectiles
+        currentBullet?.GetComponent<Rigidbody>().AddForce( directionWithSpread.normalized * bulletShootForce,ForceMode.Impulse);
+        currentBullet?.GetComponent<Rigidbody>().AddForce(playerCamera.transform.up *upwardBulletForce,ForceMode.Impulse); //only set bullet upward force  >0 for grenades or arcing projectiles
 
-        if (muzzleFlash != null) //creates muzzleflash
-            Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+    
         
         bulletsLeft--;
         bulletsShot++;

@@ -82,16 +82,19 @@ public class PlayerMovement : MonoBehaviour {
     }
     
     void Start() {
+
         startColor = RechargeUIImage.color;
         playerScale =  transform.localScale;
         pointsInTime = new List<TimeController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //  Cursor.lockState = CursorLockMode.Locked;
+        //  Cursor.visible = false;
+      
     }
 
     
     private void FixedUpdate() {
         Movement();
+      
         if (isRewinding)
         {
             Rewind();
@@ -392,12 +395,7 @@ public class PlayerMovement : MonoBehaviour {
            
         
     }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-   
-         Gizmos.DrawWireSphere(rb.position, groundSlamRadius);
-    }
+  
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.layer);

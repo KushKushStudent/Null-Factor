@@ -818,11 +818,12 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Template3D
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\kusha\Documents\Unity Game projects\The Null Factor\The
+    Null Factor\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: The Alchemists
+  metroCertificateIssuer: The Alchemists
+  metroCertificateNotAfter: 806fc757f7e1d901
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: The Null Factor

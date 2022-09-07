@@ -14,7 +14,7 @@ public class PlayerHealthController : MonoBehaviour
     public float chipSpeed;
     public Image frontHealthBar;
     public Image backHealthBar;
-    public Text healthText;
+ 
 
     [Header("Damage overlay")]
     public Image overlay;
@@ -91,17 +91,7 @@ public class PlayerHealthController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag=="EnemyProjectile")
-        {
-            TakeDamage(enemyRangedDamage);
-        
-        }
-
-        if (collision.gameObject.tag == "TouchDamage")
-        {
-            TakeDamage(5);
-
-        }
+    
 
 
     }
@@ -111,6 +101,18 @@ public class PlayerHealthController : MonoBehaviour
         {
             TakeDamage(10);
             transform.position = startPos;
+        }
+
+        if (other.gameObject.tag == "EnemyProjectile")
+        {
+            TakeDamage(enemyRangedDamage);
+
+        }
+
+        if (other.gameObject.tag == "TouchDamage")
+        {
+            TakeDamage(5);
+
         }
     }
     public void RestoreHealth(float healAmount) 

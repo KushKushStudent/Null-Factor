@@ -89,7 +89,7 @@ public class EnemyController : MonoBehaviour
     private void AttackPlayer() 
     {
         agent.SetDestination(transform.position);
-        transform.LookAt(player);
+        transform.LookAt(player.position+(2.3f*Vector3.up));
 
         if (!alreadyAttacked) 
         {

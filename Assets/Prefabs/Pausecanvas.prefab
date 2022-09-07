@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371.09894, y: -280.47}
-  m_SizeDelta: {x: 1154.106, y: 560.94}
+  m_AnchoredPosition: {x: -371.09894, y: -109.04114}
+  m_SizeDelta: {x: 1154.106, y: 903.7978}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9052314680637751904
 CanvasRenderer:
@@ -83,17 +83,25 @@ MonoBehaviour:
 
     LEFT MOUSE BUTTON-SHOOT
 
-    RIGHT MOUSE BUTTON- SHOTGUN
-    SHOT
+    RIGHT MOUSE BUTTON- AIM
 
-    WASD- MOVE
+    WASD-
+    MOVE
 
     SPACEBAR-JUMP(HOLD)
 
-    SHIFT - RUN
+    SHIFT -TIME REWIND
 
-    TIME REWIND-
-    E(HOLD)'
+    1- ASSAULT RIFLE
+
+    2-
+    SHOTGUN
+
+    3- SNIPER
+
+    4- GRENADE LAUNCHER
+
+'
 --- !u!1 &9052314681314786022
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 135}
+  m_AnchoredPosition: {x: 143, y: -48}
   m_SizeDelta: {x: 462.647, y: 305.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9052314681314786019
@@ -392,7 +400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 388.3111}
+  m_AnchoredPosition: {x: 143, y: 205.3111}
   m_SizeDelta: {x: 462.647, y: 176.5877}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9052314682118999549

@@ -82,10 +82,5 @@ public class ShieldController : MonoBehaviour
 
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-
-        Gizmos.DrawWireSphere(gameObject.transform.position, shieldRadius);
-    }
+   
 }
