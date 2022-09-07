@@ -13,6 +13,10 @@ public class ShieldController : MonoBehaviour
     public LayerMask enemyProjectiles;
     public Material shieldMat;
     public GameObject shieldUI;
+    public Image shieldUIImage;
+    public Color startColor;
+    public Color rechargeColor;
+
     public Text shieldText; 
 
     public Color projectileColour;
@@ -22,6 +26,7 @@ public class ShieldController : MonoBehaviour
         shield.SetActive(false);
         shieldUI.SetActive(true);
         shieldText.text = "F";
+        startColor = shieldUIImage.color;
     }
 
     // Update is called once per frame
@@ -40,7 +45,7 @@ public class ShieldController : MonoBehaviour
     }
     IEnumerator deactivateShield()
     {
-        shieldUI.SetActive(false);
+        //shieldUI.SetActive(false);
         shieldText.text = "Active";
         Debug.Log("shield activated");
         yield return new WaitForSeconds(5f);
@@ -50,13 +55,15 @@ public class ShieldController : MonoBehaviour
     }
     IEnumerator recharge()
     {
-        shieldText.text = "Recharging";
+        shieldUIImage.color = rechargeColor;
+        shieldText.text = "     ...";
         shieldActivated = false;
         recharging = true;
         shield.SetActive(false);
         Debug.Log("shield deactivated");
         yield return new WaitForSeconds(10f);
         shieldUI.SetActive(true);
+        shieldUIImage.color=startColor;
         recharging = false;
         shieldText.text = "F";
     }

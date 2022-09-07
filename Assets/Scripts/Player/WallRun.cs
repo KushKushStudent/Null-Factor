@@ -52,8 +52,8 @@ public class WallRun : MonoBehaviour
     }
     public void CheckForWall() 
     {
-        isWallRight = Physics.Raycast(transform.position, orientation.right, 1f, whatIsWall);
-        isWallLeft = Physics.Raycast(transform.position, -orientation.right, 1f, whatIsWall);
+        isWallRight = Physics.Raycast(transform.position, orientation.right, 5f, whatIsWall);
+        isWallLeft = Physics.Raycast(transform.position, -orientation.right, 5f, whatIsWall);
 
         if (!isWallLeft && !isWallRight) { StopWallRun(); }
     

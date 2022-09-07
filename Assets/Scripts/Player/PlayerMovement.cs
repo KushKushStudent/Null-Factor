@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -66,13 +67,22 @@ public class PlayerMovement : MonoBehaviour {
     public bool isRewinding = false;
     List<TimeController> pointsInTime;
     public int timeToRewind = 5;
+    public int rewindRechargeTime = 5;
+    public bool isRechargingRewind = false;
+    public GameObject rechargeUI;
+    public Image RechargeUIImage;
+    public Color startColor;
+    public Color rechargeColor;
 
+    [Header("Dash")]
+    public float dashMultiplier = 100;
     public int updateCounter = 0;
     void Awake() {
         rb = GetComponent<Rigidbody>();
     }
     
     void Start() {
+        startColor = RechargeUIImage.color;
         playerScale =  transform.localScale;
         pointsInTime = new List<TimeController>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -92,11 +102,11 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Update() {
         MyInput();
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.E)&&isRechargingRewind==false)
         {
             StartRewind();
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.E))
         {
             StopRewind();
         }
@@ -119,6 +129,14 @@ public class PlayerMovement : MonoBehaviour {
             StartCrouch();
         if (Input.GetKeyUp(KeyCode.LeftControl))
             StopCrouch();
+
+        if (Input.GetKeyDown(KeyCode.LeftShift)) 
+        {
+            Dash();
+        
+        
+       }
+
     }
 
     private void StartCrouch() {
@@ -144,6 +162,13 @@ public class PlayerMovement : MonoBehaviour {
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }
 
+    private void Dash()
+
+    {
+        rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * dashMultiplier);
+        rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * dashMultiplier);
+
+    }
     private void Movement() {
         //Extra gravity
         rb.AddForce(Vector3.down * Time.deltaTime * 10);
@@ -386,13 +411,20 @@ public class PlayerMovement : MonoBehaviour {
     }
     void StartRewind()
     {
+       // rechargeUI.SetActive(false);
 
         isRewinding = true;
+        
         rb.isKinematic = true;
     }
     void StopRewind()
     {
+        pointsInTime= new List<TimeController>() ;
         isRewinding = false;
+        isRechargingRewind = true;
+        RechargeUIImage.color = rechargeColor;
+        StartCoroutine(RechargeRewind());
+
         rb.isKinematic = false;
     }
     void Record()
@@ -421,6 +453,16 @@ public class PlayerMovement : MonoBehaviour {
         else { StopRewind(); }
 
     }
+
+    IEnumerator RechargeRewind() 
+    
+    {
+        yield return new WaitForSeconds(rewindRechargeTime);
+        isRechargingRewind = false;
+        rechargeUI.SetActive(true);
+        RechargeUIImage.color = startColor;
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Coin")
@@ -430,5 +472,5 @@ public class PlayerMovement : MonoBehaviour {
 
         }
     }
-
+   
 }
