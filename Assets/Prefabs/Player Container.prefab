@@ -781,6 +781,7 @@ GameObject:
   - component: {fileID: 6083975824211428533}
   - component: {fileID: 1146699271}
   - component: {fileID: 1146699277}
+  - component: {fileID: 908237437868525803}
   m_Layer: 7
   m_Name: Fps player
   m_TagString: Player
@@ -901,8 +902,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f6e9a4dfab9be458ab83be5de5323b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
   playerCam: {fileID: 6083975825217907858}
   orientation: {fileID: 6083975825314721878}
+  rb: {fileID: 0}
   moveSpeed: 4500
   maxSpeed: 60
   grounded: 0
@@ -916,6 +919,16 @@ MonoBehaviour:
   slideCounterMovement: 0.2
   jumpForce: 600
   wallRun: {fileID: 1146699271}
+  groundSlamExplosion: 0
+  groundSlamRadius: 10
+  groundSlamDamage: 30
+  enemies:
+    serializedVersion: 2
+    m_Bits: 0
+  groundSlamEffect: {fileID: 0}
+  isRewinding: 0
+  timeToRewind: 5
+  updateCounter: 0
 --- !u!114 &1146699271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,6 +972,21 @@ MonoBehaviour:
   - {fileID: 1266459390}
   - {fileID: 25744140}
   - {fileID: 1340854568}
+  gunVisuals: []
+--- !u!114 &908237437868525803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6083975824211428535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ac2af21d4cf754fb345f2b5a0ed77c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shield: {fileID: 0}
+  shieldActivated: 0
 --- !u!1 &6083975824822875136
 GameObject:
   m_ObjectHideFlags: 0
