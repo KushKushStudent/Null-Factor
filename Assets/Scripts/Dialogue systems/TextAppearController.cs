@@ -41,12 +41,19 @@ public class TextAppearController : MonoBehaviour
             dialogueBox.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+        counter++;
         yield return new WaitForSeconds(timeBetweenLines);
-        animator.Play("Fade");
+       
+        if (counter>dialogue.Length-1)
+        {
+            animator.Play("Fade");
+        }
+        else { ContinueStory(); }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (isActivated==false) 
+        if (isActivated==false&& other.tag=="Player") 
         { 
             isActivated=true;
             ContinueStory();
