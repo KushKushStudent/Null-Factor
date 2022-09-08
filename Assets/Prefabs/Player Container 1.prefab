@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 949105390713005302}
   - component: {fileID: 949105390713005296}
   - component: {fileID: 949105390713005303}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Glow Horizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4963,7 +4963,7 @@ GameObject:
   - component: {fileID: 949105390774743937}
   - component: {fileID: 949105390774743939}
   - component: {fileID: 949105390774743938}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dot Sparkles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9996,7 +9996,7 @@ GameObject:
   - component: {fileID: 949105391273084344}
   - component: {fileID: 949105391273084346}
   - component: {fileID: 949105391273084345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Explosion Add
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14984,7 +14984,7 @@ GameObject:
   - component: {fileID: 949105392093664901}
   - component: {fileID: 949105392093664903}
   - component: {fileID: 949105392093664902}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke Colon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19788,7 +19788,7 @@ GameObject:
   - component: {fileID: 949105392226070800}
   - component: {fileID: 949105392226070802}
   - component: {fileID: 949105392226070801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Explosion Mult
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25168,7 +25168,7 @@ GameObject:
   - component: {fileID: 949105392689188490}
   - component: {fileID: 949105392689188500}
   - component: {fileID: 949105392689188491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29813,7 +29813,7 @@ GameObject:
   - component: {fileID: 949105392690027780}
   - component: {fileID: 949105392690028027}
   - component: {fileID: 949105392690028026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WFXMR_Nuke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34660,7 +34660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6432681319335801626
 Transform:
   m_ObjectHideFlags: 0
@@ -34855,7 +34855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6432681319412154572
 Transform:
   m_ObjectHideFlags: 0
@@ -35174,7 +35174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6432681320642392382
 Transform:
   m_ObjectHideFlags: 0
@@ -35259,7 +35259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4682866234303362952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player Container 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35307,6 +35307,10 @@ PrefabInstance:
     - target: {fileID: 5024019563222301153, guid: b78e6821fa3108746a0958904ea2e020, type: 3}
       propertyPath: m_Name
       value: ShieldSphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024019563222301153, guid: b78e6821fa3108746a0958904ea2e020, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5024019563222301153, guid: b78e6821fa3108746a0958904ea2e020, type: 3}
       propertyPath: m_IsActive
@@ -35388,6 +35392,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 9.34
       objectReference: {fileID: 0}
+    - target: {fileID: 5024019564212152441, guid: b78e6821fa3108746a0958904ea2e020, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5024019564466674744, guid: b78e6821fa3108746a0958904ea2e020, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.654
@@ -35395,6 +35403,10 @@ PrefabInstance:
     - target: {fileID: 5024019564466674744, guid: b78e6821fa3108746a0958904ea2e020, type: 3}
       propertyPath: m_LocalPosition.y
       value: 9.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024019564466674745, guid: b78e6821fa3108746a0958904ea2e020, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b78e6821fa3108746a0958904ea2e020, type: 3}

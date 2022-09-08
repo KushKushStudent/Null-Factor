@@ -41,14 +41,14 @@ public class ProjectileGun : MonoBehaviour
         bulletsLeft = magazineSize;
         
         readyToShoot = true;
-        player = GameObject.FindGameObjectWithTag("Player");
+       // player = GameObject.FindGameObjectWithTag("Player");
     }
     void Start()
     {
         bulletsLeft = magazineSize;
 
         readyToShoot = true;
-        player = GameObject.FindGameObjectWithTag("Player");
+      //  player = GameObject.FindGameObjectWithTag("Player");
     }
     private void FixedUpdate()
     {
