@@ -100,7 +100,8 @@ public class ProjectileGun : MonoBehaviour
     {
         readyToShoot = false;
 
-        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.6f, 0.5f, 0));
+       Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.6f, 0.5f, 0)); 
+      //  Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.2f, 0.1f, 0));
         RaycastHit hit;
 
         Vector3 targetPoint;
