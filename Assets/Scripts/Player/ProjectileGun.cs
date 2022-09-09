@@ -6,7 +6,7 @@ using TMPro;
 public class ProjectileGun : MonoBehaviour
 {
     public GameObject bullet;
-    
+    public GunSwapController gunSwapController;
     [Header ("Bullet Variables") ]
     public float bulletShootForce, upwardBulletForce;
 
@@ -99,9 +99,18 @@ public class ProjectileGun : MonoBehaviour
     private void Shoot() 
     {
         readyToShoot = false;
+        Ray ray;
+        if (gunSwapController.isScoped == true)
+        {
+            ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        }
+        else {
 
-       Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.6f, 0.5f, 0)); 
-      //  Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.2f, 0.1f, 0));
+             ray = playerCamera.ViewportPointToRay(new Vector3(0.6f, 0.5f, 0));
+        }
+    
+       //
+        //  Ray ray = playerCamera.ViewportPointToRay(new Vector3(0f, 0f, 0));
         RaycastHit hit;
 
         Vector3 targetPoint;
