@@ -32,7 +32,8 @@ public class GunSwapController : MonoBehaviour
 
     public Image sniperSil;
     public Image shotgunSil;
-    public Image arSil;
+    public Image arSil;  
+    public Image nadeSil;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +94,7 @@ public class GunSwapController : MonoBehaviour
             DeactivateGunVisuals();
             guns[3].SetActive(true);
             gunVisuals[3].SetActive(true);
+            switchSil(nadeSil);
         }
 
         if (Input.GetButtonDown("Fire2")&& gunNumber==2) 
