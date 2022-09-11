@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunSwapController : MonoBehaviour
 {
@@ -28,6 +29,10 @@ public class GunSwapController : MonoBehaviour
     public float normalFOV;
     public float sniperScopedFOV=15f;
     public float aDSFOV = 30f;
+
+    public Image sniperSil;
+    public Image shotgunSil;
+    public Image arSil;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +62,7 @@ public class GunSwapController : MonoBehaviour
             gunNumber = 0;
 
             gunVisuals[0].SetActive(true);
+            switchSil(arSil);
 
         } 
         if (Input.GetKeyDown(KeyCode.Alpha2)) //gun 2
@@ -66,6 +72,7 @@ public class GunSwapController : MonoBehaviour
             guns[1].SetActive(true);
             gunVisuals[1].SetActive(true);
             gunNumber = 1;
+            switchSil(shotgunSil);
         } 
         
         if (Input.GetKeyDown(KeyCode.Alpha3)) //gun 3
@@ -75,6 +82,7 @@ public class GunSwapController : MonoBehaviour
             guns[2].SetActive(true);
             gunVisuals[2].SetActive(true);
             gunNumber = 2;
+            switchSil(sniperSil);
         }
         
         
@@ -218,4 +226,13 @@ public class GunSwapController : MonoBehaviour
 
     }
     public void SniperScope() { }
+    public void switchSil(Image thisImage) 
+    { 
+        arSil.gameObject.SetActive(false);
+        sniperSil.gameObject.SetActive(false);
+        shotgunSil.gameObject.SetActive(false);
+        thisImage.gameObject.SetActive(true);
+
+    
+    }
 }
