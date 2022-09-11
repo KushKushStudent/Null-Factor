@@ -233,6 +233,7 @@ public class GunSwapController : MonoBehaviour
         arSil.gameObject.SetActive(false);
         sniperSil.gameObject.SetActive(false);
         shotgunSil.gameObject.SetActive(false);
+        nadeSil.gameObject.SetActive(false);
         thisImage.gameObject.SetActive(true);
 
     

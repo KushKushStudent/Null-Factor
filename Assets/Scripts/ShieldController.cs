@@ -56,7 +56,7 @@ public class ShieldController : MonoBehaviour
     IEnumerator recharge()
     {
         shieldUIImage.color = rechargeColor;
-        shieldText.text = "     ...";
+        shieldText.text = "...";
         shieldActivated = false;
         recharging = true;
         shield.SetActive(false);
