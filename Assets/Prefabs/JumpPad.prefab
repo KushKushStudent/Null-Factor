@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 452104045}
   - component: {fileID: 452104047}
   - component: {fileID: 452104046}
-  m_Layer: 3
+  m_Layer: 2
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4824,7 +4824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7887299445881652182}
   - component: {fileID: 4797969576377933572}
-  m_Layer: 3
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1072,7 +1072,7 @@ MonoBehaviour:
   decoy2: {fileID: 8444152119778300057}
   decoy3: {fileID: 3058131240456284546}
   deployTime: 0
-  timeBetweenSpawns: 5
+  timeBetweenSpawns: 10
   canDeploy: 1
 --- !u!114 &7313221944978862270
 MonoBehaviour:
@@ -1106,7 +1106,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.79
+  m_Volume: 0.402
   m_Pitch: 1.79
   Loop: 0
   Mute: 0
