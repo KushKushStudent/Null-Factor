@@ -32,7 +32,10 @@ public class ProjectileGun : MonoBehaviour
     public TextMeshProUGUI ammunitionDisplay;
 
     public GameObject player;
-
+    [Header("Audio")]
+    public AudioSource audioPlayer;
+    public AudioClip fireSound;
+    public AudioClip reloadSound;
 
 
     // Start is called before the first frame update
@@ -132,7 +135,8 @@ public class ProjectileGun : MonoBehaviour
 
 
         Vector3 directionWithSpread = directionWithoutSpeed + new Vector3(x, y, 0);
-
+        audioPlayer.clip=fireSound;
+        audioPlayer.Play();
         GameObject ?currentBullet=Instantiate(bullet,attackPoint.position,Quaternion.identity);
 
         currentBullet.transform.forward = directionWithSpread.normalized+ player.GetComponent<Rigidbody>().velocity;
@@ -169,6 +173,8 @@ public class ProjectileGun : MonoBehaviour
 
     private void Reload()
     {
+        audioPlayer.clip = reloadSound;
+        audioPlayer.Play();
         ammunitionDisplay.SetText("Reloading...");
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
