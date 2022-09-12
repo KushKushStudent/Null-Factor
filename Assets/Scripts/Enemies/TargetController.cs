@@ -1,9 +1,15 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Collections;
+
 
 public class TargetController : MonoBehaviour
 {
+    public ParticleSystem explosionFX;
+    public AudioSource enemyAudio;
+    public AudioClip deathAudio;
     // Start is called before the first frame update
     public float health = 100f;
 
@@ -12,6 +18,7 @@ public class TargetController : MonoBehaviour
    
     public Slider slider;
     private Camera cam;
+    public ParticleSystem tempExplosion;
 
  
     private void Start()
@@ -45,14 +52,30 @@ public class TargetController : MonoBehaviour
             Die();
         }
     }
-
+    
+   
     void Die() 
     {
-        Destroy(transform.gameObject);
+     
+       tempExplosion =Instantiate(explosionFX, transform.position,Quaternion.identity);
+        enemyAudio.clip = deathAudio;
+        enemyAudio.Play();
+
+        StartCoroutine(ExplosionDeath());
+   
     }
     float CalculateHealth() 
     {
 
         return health / maxHealth;
     }
+
+    IEnumerator ExplosionDeath()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(tempExplosion);
+        Destroy(transform.gameObject);
+
+    }
+
 }
