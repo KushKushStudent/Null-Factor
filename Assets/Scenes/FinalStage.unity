@@ -1384,7 +1384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1795425980942835559, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.14
+      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: 1795425980942835559, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1400,11 +1400,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1795425981658358708, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.033
+      value: 10.25
       objectReference: {fileID: 0}
     - target: {fileID: 1795425981658358708, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 98.77
+      value: 91.4
       objectReference: {fileID: 0}
     - target: {fileID: 3803369061959062954, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_RootOrder
@@ -1457,6 +1457,14 @@ PrefabInstance:
     - target: {fileID: 4093370687005687845, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093370687005687845, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093370687005687845, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4576669520058879760, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_Name
@@ -2581,7 +2589,7 @@ GameObject:
   - component: {fileID: 191266930}
   - component: {fileID: 191266929}
   - component: {fileID: 191266928}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Start (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2808,7 +2816,7 @@ GameObject:
   - component: {fileID: 191778743}
   - component: {fileID: 191778742}
   - component: {fileID: 191778741}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hallway (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3341,7 +3349,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh60858
+  m_Name: pb_Mesh29148
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5121,7 +5129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0.89133024, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6693,7 +6701,7 @@ GameObject:
   - component: {fileID: 496903073}
   - component: {fileID: 496903072}
   - component: {fileID: 496903071}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hallway (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9796,7 +9804,7 @@ GameObject:
   - component: {fileID: 647776075}
   - component: {fileID: 647776074}
   - component: {fileID: 647776073}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Start (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12765,7 +12773,7 @@ GameObject:
   - component: {fileID: 849468466}
   - component: {fileID: 849468465}
   - component: {fileID: 849468464}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Start (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13991,11 +13999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.94
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 105.76
+      value: 99.67
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20231,7 +20239,7 @@ GameObject:
   - component: {fileID: 1393625346}
   - component: {fileID: 1393625345}
   - component: {fileID: 1393625344}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hallway (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21073,7 +21081,7 @@ GameObject:
   - component: {fileID: 1494775583}
   - component: {fileID: 1494775582}
   - component: {fileID: 1494775581}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hallway (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22937,7 +22945,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh61246
+  m_Name: pb_Mesh27656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24609,6 +24617,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4093370687005687845, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093370687005687845, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4576669520058879760, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_Name
       value: VerticalDoor (2)
@@ -25019,7 +25035,7 @@ GameObject:
   - component: {fileID: 1792465157}
   - component: {fileID: 1792465156}
   - component: {fileID: 1792465155}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: endbeta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27876,7 +27892,7 @@ GameObject:
   - component: {fileID: 2029323187}
   - component: {fileID: 2029323186}
   - component: {fileID: 2029323188}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28530,7 +28546,7 @@ GameObject:
   - component: {fileID: 2069001354}
   - component: {fileID: 2069001353}
   - component: {fileID: 2069001352}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hallway (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29699,7 +29715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 581.90265, y: -40.231148}
+  m_AnchoredPosition: {x: 1117, y: -40.231148}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2128071041
@@ -29716,7 +29732,7 @@ GameObject:
   - component: {fileID: 2128071045}
   - component: {fileID: 2128071044}
   - component: {fileID: 2128071043}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30346,7 +30362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 949105391661599232, guid: 6c55d1040f428094ebd21632e53ec4f0, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 949105391661599232, guid: 6c55d1040f428094ebd21632e53ec4f0, type: 3}
       propertyPath: m_IsActive
@@ -30374,7 +30390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 949105391779044248, guid: 6c55d1040f428094ebd21632e53ec4f0, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 949105392093664900, guid: 6c55d1040f428094ebd21632e53ec4f0, type: 3}
       propertyPath: m_Layer
@@ -30406,7 +30422,7 @@ PrefabInstance:
       objectReference: {fileID: 1064897205}
     - target: {fileID: 949105392573067224, guid: 6c55d1040f428094ebd21632e53ec4f0, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 949105392689188489, guid: 6c55d1040f428094ebd21632e53ec4f0, type: 3}
       propertyPath: m_Layer
@@ -32489,6 +32505,14 @@ PrefabInstance:
     - target: {fileID: 4093370687005687845, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093370687005687845, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093370687005687845, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4576669520058879760, guid: 1a17e2171596b9f48b8a440868f04322, type: 3}
       propertyPath: m_Name

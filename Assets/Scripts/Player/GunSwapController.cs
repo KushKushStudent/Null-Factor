@@ -57,7 +57,8 @@ public class GunSwapController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) //gun 1
         {
-            isScoped = false;
+            ResetGunAnims();
+            ResetGunAnims();
             DeactivateGunVisuals();
             guns[0].SetActive(true);
             gunNumber = 0;
@@ -68,7 +69,7 @@ public class GunSwapController : MonoBehaviour
         } 
         if (Input.GetKeyDown(KeyCode.Alpha2)) //gun 2
         {
-            isScoped = false;
+            ResetGunAnims();
             DeactivateGunVisuals();
             guns[1].SetActive(true);
             gunVisuals[1].SetActive(true);
@@ -78,6 +79,7 @@ public class GunSwapController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Alpha3)) //gun 3
         {
+            ResetGunAnims();
             isScoped = false;
             DeactivateGunVisuals();
             guns[2].SetActive(true);
@@ -89,7 +91,7 @@ public class GunSwapController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Alpha4)) //gun 4
         {
-            isScoped = false;
+            ResetGunAnims();
             gunNumber = 3;
             DeactivateGunVisuals();
             guns[3].SetActive(true);
@@ -237,5 +239,13 @@ public class GunSwapController : MonoBehaviour
         thisImage.gameObject.SetActive(true);
 
     
+    }
+    private void ResetGunAnims()
+    {
+        isScoped = false;
+        sniperAnimator.SetBool("isScoped", isScoped);
+        aRAnimator.SetBool("isScoped", isScoped);
+        shotgunAnimator.SetBool("isScoped", isScoped);
+        GrenadeAnimator.SetBool("isScoped", isScoped);
     }
 }
