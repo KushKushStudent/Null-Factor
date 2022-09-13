@@ -72,7 +72,7 @@ public class TargetController : MonoBehaviour
 
     IEnumerator ExplosionDeath()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
         Destroy(tempExplosion);
         Destroy(transform.gameObject);
 
