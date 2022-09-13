@@ -3,7 +3,22 @@ guid: a78e3d848d00ec14fa36e942fbdbdda8
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalPanelRectangular001_4K
+    second: {fileID: 2100000, guid: bd3555d9509be8f4780568dda1a27d93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: P.Glow
+    second: {fileID: 2100000, guid: 3b2db6a9bdf836d4cb4615fbcc55db61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall-Black
+    second: {fileID: 2100000, guid: 1528311e4a84ebb4785bffbef961bde4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
