@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: a78e3d848d00ec14fa36e942fbdbdda8
-ModelImporter:
-  serializedVersion: 21202
-  internalIDToNameTable: []
-  externalObjects: {}
-=======
-guid: f18f1084f73365249860229e45da19db
+guid: d00b4c141fdf8624780e32adc6790c35
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -14,19 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: MetalPanelRectangular001_4K
-    second: {fileID: 2100000, guid: bd3555d9509be8f4780568dda1a27d93, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: P.Glow
-    second: {fileID: 2100000, guid: 3b2db6a9bdf836d4cb4615fbcc55db61, type: 2}
+      name: Block#2
+    second: {fileID: 2100000, guid: 520f455af69091c40b0eb8d6d49b1ced, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Wall-Black
-    second: {fileID: 2100000, guid: 1528311e4a84ebb4785bffbef961bde4, type: 2}
->>>>>>> Stashed changes
+    second: {fileID: 2100000, guid: a093ccf8ea9369049b7421f0c54bf8b2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
