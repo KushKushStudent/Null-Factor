@@ -168,8 +168,24 @@ public class PlayerMovement : MonoBehaviour {
     private void Dash()
 
     {
-        rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * dashMultiplier);
-        rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * dashMultiplier);
+        if (grounded == true) 
+        {
+            rb.AddForce(Vector2.up * jumpForce * 1f);
+            rb.AddForce(normalVector * jumpForce * 0.3f);
+            rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * dashMultiplier*6);
+            rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * dashMultiplier*6);
+            rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * dashMultiplier);
+           
+
+
+        }
+        else 
+        {
+            rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * dashMultiplier);
+            rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * dashMultiplier);
+
+
+        }
 
     }
     private void Movement() {

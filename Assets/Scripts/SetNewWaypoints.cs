@@ -8,6 +8,7 @@ public class SetNewWaypoints : MonoBehaviour
     public Image[] imgs;
 
     public Transform[] targets;
+
     public WaypointController wp;
 
     public Text[] meters;
