@@ -9,6 +9,7 @@ TagManager:
   - PlayerProjectile
   - Coin
   - Enemy
+  - BossProjectile
   layers:
   - Default
   - TransparentFX

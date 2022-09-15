@@ -108,6 +108,12 @@ public class PlayerHealthController : MonoBehaviour
             TakeDamage(enemyRangedDamage);
 
         }
+        
+        if (other.gameObject.tag == "BossProjectile")
+        {
+            TakeDamage(30f);
+
+        }
 
         if (other.gameObject.tag == "TouchDamage")
         {
