@@ -22,6 +22,7 @@ public class Boss1Controller : MonoBehaviour
     public GameObject projectile;
     public GameObject bulletSpawnPoint;
     public GameObject BossSpikes;
+    public float bulletForce = 100f;
 
     //states
     public float sightRange, attackRange;
@@ -84,11 +85,12 @@ public class Boss1Controller : MonoBehaviour
     {
         agent.SetDestination(transform.position);
         transform.LookAt(player);
+       bulletSpawnPoint.transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
             Rigidbody rb = Instantiate(projectile, bulletSpawnPoint.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 16f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * bulletForce, ForceMode.Impulse);
             rb.AddForce(transform.up * 1f, ForceMode.Impulse);
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
