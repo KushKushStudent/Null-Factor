@@ -67,16 +67,17 @@ public class EnemyController : MonoBehaviour
             agent.SetDestination(walkPoint);
         Vector3 distanceToWalkPoint=transform.position - walkPoint;
 
-        if (distanceToWalkPoint.magnitude < 1f)
+        if (distanceToWalkPoint.magnitude < 5f)
             walkPointSet = false;
     }
     private void SearchWalkPoint() 
     {
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        float randomy = Random.Range(-3, 3);
+        walkPoint = new Vector3(transform.position.x+ randomX, transform.position.y, transform.position.z + randomZ);
 
-        if (Physics.Raycast(walkPoint,-transform.up,2f,whatIsGround)) 
+        if (Physics.Raycast(walkPoint,-transform.up*1f,10f,whatIsGround)) 
         {
             walkPointSet = true;
         }
