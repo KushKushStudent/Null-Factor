@@ -19,8 +19,12 @@ public class FloorMove : MonoBehaviour
     {
         if (buttonController.isActivated == true)
         {
-            floorAnim.SetBool("isActivated",true);
             setNewWaypoints.setNewWaypoints();
+            floorAnim.SetBool("isActivated",true);
+            Destroy(this.gameObject.GetComponent<FloorMove>());           
         }
+
     }
+
+   
 }
