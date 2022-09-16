@@ -27,7 +27,8 @@ public class FinalObjectiveController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        setNewWaypoints();
+        if (other.tag=="Player") { setNewWaypoints(); }
+       ;
     }
     public void setNewWaypoints()
     {
