@@ -25,7 +25,7 @@ public class ShieldController : MonoBehaviour
     {
         shield.SetActive(false);
         shieldUI.SetActive(true);
-        shieldText.text = "F";
+      //  shieldText.text = "F";
         startColor = shieldUIImage.color;
     }
 
@@ -46,8 +46,8 @@ public class ShieldController : MonoBehaviour
     IEnumerator deactivateShield()
     {
         //shieldUI.SetActive(false);
-        shieldText.text = "Active";
-        Debug.Log("shield activated");
+       // shieldText.text = "Active";
+       // Debug.Log("shield activated");
         yield return new WaitForSeconds(5f);
        
         
@@ -56,11 +56,11 @@ public class ShieldController : MonoBehaviour
     IEnumerator recharge()
     {
         shieldUIImage.color = rechargeColor;
-        shieldText.text = "...";
+       // shieldText.text = "...";
         shieldActivated = false;
         recharging = true;
         shield.SetActive(false);
-        Debug.Log("shield deactivated");
+       // Debug.Log("shield deactivated");
         yield return new WaitForSeconds(10f);
         shieldUI.SetActive(true);
         shieldUIImage.color=startColor;
