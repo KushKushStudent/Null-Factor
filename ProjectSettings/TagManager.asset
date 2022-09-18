@@ -10,6 +10,7 @@ TagManager:
   - Coin
   - Enemy
   - BossProjectile
+  - TouchDamage
   layers:
   - Default
   - TransparentFX

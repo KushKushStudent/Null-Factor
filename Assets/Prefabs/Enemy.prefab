@@ -1063,8 +1063,8 @@ MonoBehaviour:
   projectile: {fileID: 2416130882664782325, guid: 2cfbceb44a0dde14fb96b3359a62d3e1, type: 3}
   bulletSpawnPoint: {fileID: 2537293412362773054}
   bulletForce: 500
-  sightRange: 150
-  attackRange: 75
+  sightRange: 200
+  attackRange: 125
   playerInSightRange: 0
   playerInAttackRange: 0
   decoyPrefab: {fileID: 8089991004374875743, guid: 69f89a23caead41468f4d1d94e1f8802, type: 3}

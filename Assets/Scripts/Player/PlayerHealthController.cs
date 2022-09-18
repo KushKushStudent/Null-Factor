@@ -114,10 +114,11 @@ public class PlayerHealthController : MonoBehaviour
             TakeDamage(30f);
 
         }
+        
 
         if (other.gameObject.tag == "TouchDamage")
         {
-            TakeDamage(5);
+            TakeDamage(2);
 
         }
     }

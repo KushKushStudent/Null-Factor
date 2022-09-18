@@ -10,6 +10,7 @@ public class TargetController : MonoBehaviour
     public ParticleSystem explosionFX;
     public AudioSource enemyAudio;
     public AudioClip deathAudio;
+    public bool isDecoy;
     // Start is called before the first frame update
     public float health = 100f;
 
@@ -20,11 +21,14 @@ public class TargetController : MonoBehaviour
     private Camera cam;
     public ParticleSystem tempExplosion;
 
+    public GameManager gameManager;
  
     private void Start()
     {cam=Camera.main;
+        gameManager=FindObjectOfType<GameManager>();
         slider.value = CalculateHealth();
        maxHealth=health;
+        
     }
     private void Update()
     {
@@ -73,6 +77,16 @@ public class TargetController : MonoBehaviour
     IEnumerator ExplosionDeath()
     {
         yield return new WaitForSeconds(0.3f);
+        if (isDecoy == true)
+        {
+            gameManager.updateDecoyUI();
+
+
+        }
+        else
+        {
+            gameManager.updateSpawnerUI();
+        }
         Destroy(tempExplosion);
         Destroy(transform.gameObject);
 

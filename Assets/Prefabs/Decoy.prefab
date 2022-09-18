@@ -648,8 +648,8 @@ MonoBehaviour:
   projectile: {fileID: 2416130882664782325, guid: 2cfbceb44a0dde14fb96b3359a62d3e1, type: 3}
   bulletSpawnPoint: {fileID: 2537293412362773054}
   bulletForce: 500
-  sightRange: 120
-  attackRange: 50
+  sightRange: 150
+  attackRange: 80
   playerInSightRange: 0
   playerInAttackRange: 0
   decoyPrefab: {fileID: 0}
@@ -674,11 +674,13 @@ MonoBehaviour:
   explosionFX: {fileID: 3940036432451144814, guid: 1e26c7a626fbf1d4eb908e74af5247a8, type: 3}
   enemyAudio: {fileID: 4577130469916767966}
   deathAudio: {fileID: 8300000, guid: a9e3fee688cf000499bded40dd54ff48, type: 3}
+  isDecoy: 1
   health: 10
   maxHealth: 10
   hpCanvas: {fileID: 5995082155632661925}
   slider: {fileID: 3373313103091236135}
   tempExplosion: {fileID: 3940036432451144814, guid: e7195681d4821c847a757d5174cae6ab, type: 3}
+  gameManager: {fileID: 0}
 --- !u!82 &4577130469916767966
 AudioSource:
   m_ObjectHideFlags: 0

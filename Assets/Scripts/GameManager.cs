@@ -9,9 +9,14 @@ public class GameManager : MonoBehaviour
     public int coinsCollected = 0;
     public int maxCoins=1;
     public Text coinText;
+    public Text decoysDestroyedUI;
+    public Text spawnersDestroyedUI;
+   
     public bool paused = false;
     public GameObject pauseCanvas;
 
+    public int decoysDestroyed=0;
+    public int spawnersDestroyed=0;
     // Start is called before the first frame update
     void Start()
     
@@ -26,6 +31,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(decoysDestroyed);
         if (Input.GetKeyDown(KeyCode.Escape)&& paused==false) 
         {
             Debug.Log("paused");
@@ -62,6 +68,17 @@ else if (Input.GetKeyDown(KeyCode.Escape)&& paused==true)
     { 
         coinText.text=coinsCollected.ToString()+"/"+maxCoins.ToString();
     
+    }
+    public void updateDecoyUI() 
+    { 
+        decoysDestroyed++;
+        decoysDestroyedUI.text="DECOYS DESTROYED: "+decoysDestroyed.ToString();
+       
+    }
+    public void updateSpawnerUI()
+    {
+        spawnersDestroyed++;
+        spawnersDestroyedUI.text = "SPAWNERS DESTROYED: " + spawnersDestroyed.ToString();
     }
     
 }

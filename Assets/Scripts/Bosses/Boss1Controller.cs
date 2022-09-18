@@ -24,6 +24,8 @@ public class Boss1Controller : MonoBehaviour
     public GameObject BossSpikes;
     public float bulletForce = 100f;
 
+    public Animator animator;
+
     //states
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -104,7 +106,15 @@ public class Boss1Controller : MonoBehaviour
     }
 
     private void Defense() {
-
-     BossSpikes.SetActive(true); BossSpikes.SetActive(false);
+        animator.SetBool("Defending",true);
+     BossSpikes.SetActive(true); 
+        
+        
+    }
+    IEnumerator DisableDefenses() 
+    {
+        yield return new WaitForSeconds(6);
+        BossSpikes.SetActive(false);
+        animator.SetBool("Defending", false);
     }
 }
