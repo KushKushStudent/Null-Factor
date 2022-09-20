@@ -58,7 +58,7 @@ public class GunSwapController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)) //gun 1
         {
             ResetGunAnims();
-            ResetGunAnims();
+           
             DeactivateGunVisuals();
             guns[0].SetActive(true);
             gunNumber = 0;

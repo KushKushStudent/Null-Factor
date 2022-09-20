@@ -24,7 +24,7 @@ public class ShieldController : MonoBehaviour
     void Start()
     {
         shield.SetActive(false);
-        shieldUI.SetActive(true);
+       // shieldUI.SetActive(true);
       //  shieldText.text = "F";
         startColor = shieldUIImage.color;
     }
