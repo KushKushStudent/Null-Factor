@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2c6f85acd1d9a1e40b42683175b122da
+guid: cee762c306dd1d34f8e9b4c0b09fc64d
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Droid
-    second: {fileID: 2100000, guid: 54a7db9b013143c4cac2f7252a34b7e2, type: 2}
+      name: Enemy Droid
+    second: {fileID: 2100000, guid: 6c14d348fdc37df42918702ff4a61fa1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
