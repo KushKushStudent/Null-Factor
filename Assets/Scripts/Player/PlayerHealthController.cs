@@ -75,7 +75,7 @@ public class PlayerHealthController : MonoBehaviour
         }
         if (health<=0) 
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     
     }
