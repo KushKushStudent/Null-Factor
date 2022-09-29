@@ -6861,14 +6861,14 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 1000
   defenseRange: 750
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 1
   projectile: {fileID: 2416130882664782325, guid: cf1089085ba05cd43a76aa3395d079b5, type: 3}
   bulletSpawnPoint: {fileID: 2537293412362773054}
   BossSpikes: {fileID: 303225006745518953}
-  bulletForce: 500
+  bulletForce: 1000
   animator: {fileID: 1387022496700884622}
   sightRange: 2000
-  attackRange: 1500
+  attackRange: 2000
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!82 &6094439049196425896

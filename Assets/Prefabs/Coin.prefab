@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6088922614081820267}
   - component: {fileID: 3731587682336321683}
   - component: {fileID: 4081054140636105647}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2361930877299801407}
   - component: {fileID: 2860619432881157414}
   - component: {fileID: 1191275711}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Coin
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.97365385
+  m_Radius: 2.08
   m_Height: 16.97148
   m_Direction: 1
   m_Center: {x: 0.01722153, y: -1.5034958e-15, z: 0.084719025}
@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5774046567050545957}
   - component: {fileID: 4719389226315539832}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6103649378257521065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.88, y: 1.2, z: 0}
+  m_LocalPosition: {x: 1.58, y: -2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,7 +243,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.7673603, b: 0, a: 1}
   m_Intensity: 12.33
-  m_Range: 23.98
+  m_Range: 47.1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

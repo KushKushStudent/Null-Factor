@@ -12,7 +12,7 @@ public class ShieldController : MonoBehaviour
     public bool recharging = false;
     public LayerMask enemyProjectiles;
     public Material shieldMat;
-    public GameObject shieldUI;
+   // public GameObject shieldUI;
     public Image shieldUIImage;
     public Color startColor;
     public Color rechargeColor;
@@ -62,7 +62,7 @@ public class ShieldController : MonoBehaviour
         shield.SetActive(false);
        // Debug.Log("shield deactivated");
         yield return new WaitForSeconds(10f);
-        shieldUI.SetActive(true);
+      /// shieldUI.SetActive(true);
         shieldUIImage.color=startColor;
         recharging = false;
         shieldText.text = "F";

@@ -301,6 +301,10 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8480389550604645998, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.81282085
+      objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206852, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_Name
       value: ButtonDoor1 (3)
@@ -311,15 +315,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7167842
+      value: 0.9448649
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1685732
+      value: 0.22514641
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7167842
+      value: 0.9448649
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -384,6 +388,10 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8480389550604645998, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.81282085
+      objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206852, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_Name
       value: ButtonDoor1 (2)
@@ -394,15 +402,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7167842
+      value: 0.9448649
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1685732
+      value: 0.22514641
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7167842
+      value: 0.9448649
       objectReference: {fileID: 0}
     - target: {fileID: 8480389552624206853, guid: 08bef7cfef14104418e35d1505af46d5, type: 3}
       propertyPath: m_LocalPosition.x

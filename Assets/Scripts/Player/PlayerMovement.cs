@@ -222,8 +222,8 @@ public class PlayerMovement : MonoBehaviour {
         
         // Movement in air
         if (!grounded) {
-            multiplier = 0.5f;
-            multiplierV = 0.5f;
+           // multiplier = 0.5f;
+           // multiplierV = 0.5f;
         }
         
         // Movement while sliding
@@ -244,11 +244,11 @@ public class PlayerMovement : MonoBehaviour {
 
             //If jumping while falling, reset y velocity.
             Vector3 vel = rb.velocity;
-           /* if (rb.velocity.y < 0.5f)
+          if (rb.velocity.y < 0.5f)
                 rb.velocity = new Vector3(vel.x, 0, vel.z);
             else if (rb.velocity.y > 0)
                 rb.velocity = new Vector3(vel.x, vel.y / 2, vel.z);
-           */
+          
             Invoke(nameof(ResetJump), jumpCooldown);
         }
         if (wallRun.isWallRunning)
@@ -261,8 +261,8 @@ public class PlayerMovement : MonoBehaviour {
 
             }
             if (wallRun.isWallRight || wallRun.isWallLeft && Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) rb.AddForce(-orientation.up * jumpForce * 1f);
-            if (wallRun.isWallRight && Input.GetKey(KeyCode.A)) rb.AddForce(-orientation.right * jumpForce * 3f); 
-            if (wallRun.isWallLeft && Input.GetKey(KeyCode.D)) rb.AddForce(orientation.right * jumpForce * 3f);
+            if (wallRun.isWallRight && Input.GetKey(KeyCode.A)) rb.AddForce(-orientation.right * jumpForce * 6f); 
+            if (wallRun.isWallLeft && Input.GetKey(KeyCode.D)) rb.AddForce(orientation.right * jumpForce * 6f);
 
             rb.AddForce(orientation.forward * jumpForce * 1f);
           //  rb.velocity = Vector3.zero;
@@ -472,6 +472,7 @@ public class PlayerMovement : MonoBehaviour {
     
     {
         yield return new WaitForSeconds(rewindRechargeTime);
+        yield return new WaitForSeconds(rewindRechargeTime); 
         isRechargingRewind = false;
         rechargeUI.SetActive(true);
         RechargeUIImage.color = startColor;
@@ -481,8 +482,9 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (other.gameObject.tag == "Coin")
         {
-            Destroy(other.gameObject);
             gm.collectCoin();
+            Destroy(other.gameObject);
+          
 
         }
     }

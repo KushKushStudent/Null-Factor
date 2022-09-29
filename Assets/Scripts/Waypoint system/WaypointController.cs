@@ -92,16 +92,17 @@ public class WaypointController : MonoBehaviour
 
     public void changeWaypoints(Image []newImgs,Transform [] newTargets,Text [] newMeters) 
     {
+        imgs = new Image [newImgs.Length];
         imgs = newImgs;
 
       targets= newTargets;
         meters = newMeters;
-
-        for (int i = 0; i < imgs.Length; i++)
+        ResetUI();
+        for (int i = 0; i < newImgs.Length; i++)
 
         {
-            imgs[i].enabled = true;
-            meters[i].enabled = true;
+            imgs[i].gameObject.SetActive(true);
+            meters[i].gameObject.SetActive(true);
         }
     }
 
@@ -111,8 +112,9 @@ public class WaypointController : MonoBehaviour
         for (int i = 0; i < allImgs.Length; i++)
 
         {
-            allImgs[i].enabled = false;
-            allMeters[i].enabled = false;
+            
+            allImgs[i].gameObject.SetActive(false);
+            allMeters[i].gameObject.SetActive( false);
         }
     }
 }

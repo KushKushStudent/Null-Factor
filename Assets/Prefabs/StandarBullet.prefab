@@ -191,7 +191,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5660023626405316792}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8723517989ade0c4098e11691cffc2c5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   despawnTime: 5
-  bounces: 2
+  bounces: 3
   currentBounces: 0
 --- !u!114 &5681748201386422524
 MonoBehaviour:
