@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 844f726c6dbd5ce45883590e0fb744d6
+  - enabled: 0
+    path: Assets/Scenes/Null Factor test.unity
+    guid: 2745cc13a6e1dac46b8be3ea0c291db5
   m_configObjects: {}

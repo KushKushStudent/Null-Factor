@@ -77,6 +77,10 @@ public class PlayerMovement : MonoBehaviour {
     [Header("Dash")]
     public float dashMultiplier = 100;
     public int updateCounter = 0;
+
+    public float lastApex;
+
+
     void Awake() {
         rb = GetComponent<Rigidbody>();
     }
@@ -126,7 +130,7 @@ public class PlayerMovement : MonoBehaviour {
         y = Input.GetAxisRaw("Vertical");
         jumping = Input.GetButton("Jump");
         crouching = Input.GetKey(KeyCode.LeftControl);
-      
+        
         //Crouching
         if (Input.GetKeyDown(KeyCode.LeftControl))
             StartCrouch();
@@ -190,6 +194,7 @@ public class PlayerMovement : MonoBehaviour {
     }
     private void Movement() {
         //Extra gravity
+   
         rb.AddForce(Vector3.down * Time.deltaTime * 10);
         
         //Find actual velocity relative to where player is looking
@@ -222,8 +227,9 @@ public class PlayerMovement : MonoBehaviour {
         
         // Movement in air
         if (!grounded) {
-           // multiplier = 0.5f;
-           // multiplierV = 0.5f;
+         
+            // multiplier = 0.5f;
+            // multiplierV = 0.5f;
         }
         
         // Movement while sliding

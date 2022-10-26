@@ -57,6 +57,7 @@ public class GunSwapController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) //gun 1
         {
+            isScoped = false;
             ResetGunAnims();
            
             DeactivateGunVisuals();
@@ -69,6 +70,8 @@ public class GunSwapController : MonoBehaviour
         } 
         if (Input.GetKeyDown(KeyCode.Alpha2)) //gun 2
         {
+
+            isScoped = false;
             ResetGunAnims();
             DeactivateGunVisuals();
             guns[1].SetActive(true);
@@ -79,6 +82,8 @@ public class GunSwapController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Alpha3)) //gun 3
         {
+
+            isScoped = false;
             ResetGunAnims();
             isScoped = false;
             DeactivateGunVisuals();
@@ -91,6 +96,8 @@ public class GunSwapController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Alpha4)) //gun 4
         {
+
+            isScoped = false;
             ResetGunAnims();
             gunNumber = 3;
             DeactivateGunVisuals();

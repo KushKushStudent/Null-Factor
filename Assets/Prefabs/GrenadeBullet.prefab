@@ -363,12 +363,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundSlamExplosion: 0
-  groundSlamRadius: 10
+  groundSlamRadius: 20
   groundSlamDamage: 30
   enemies:
     serializedVersion: 2
     m_Bits: 256
   groundSlamEffect: {fileID: 19800002, guid: 4bf22a1d8d9e7724b9af67921436851d, type: 3}
+  isGrenade: 1
+  isSlowGrenade: 0
+  isCollapsingGrenade: 0
 --- !u!1 &7129819584265794819
 GameObject:
   m_ObjectHideFlags: 0

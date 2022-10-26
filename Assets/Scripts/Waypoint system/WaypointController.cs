@@ -36,7 +36,7 @@ public class WaypointController : MonoBehaviour
             imgs[i].enabled = true;
             meters[i].enabled = true;
         }
-
+      
        
 
     }

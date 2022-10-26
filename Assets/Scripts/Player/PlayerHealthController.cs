@@ -105,12 +105,14 @@ public class PlayerHealthController : MonoBehaviour
 
         if (other.gameObject.tag == "EnemyProjectile")
         {
+            Destroy(other.gameObject);
             TakeDamage(enemyRangedDamage);
 
         }
         
         if (other.gameObject.tag == "BossProjectile")
         {
+            Destroy(other.gameObject);
             TakeDamage(30f);
 
         }
